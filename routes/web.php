@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\AutorController;
+use App\Http\Controllers\LibroController;
+use App\Http\Controllers\EditorialController;
+use App\Http\Controllers\EjemplarController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,5 +32,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-Route::resource('dashboard/post', PostController::class);
-Route::resource('dashboard/category', CategoryController::class);
+Route::resource('dashboard/libro', LibroController::class);
+Route::resource('dashboard/autor', AutorController::class);
+Route::resource('dashboard/editorial', EditorialController::class);
+Route::resource('dashboard/ejemplar', EjemplarController::class);

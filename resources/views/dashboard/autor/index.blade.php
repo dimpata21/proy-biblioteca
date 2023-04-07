@@ -1,17 +1,18 @@
 @extends('dashboard.master')
-@section('titulo', 'Categoria')
+@section('titulo', 'Autor')
 @section('contenido')
 
 <main>
     <div class="container py-4">
-        <h2>Categorias</h2>
-        <a href="{{ url('/dashboard/category/create') }}" class="btn btn-primary btn-sm">Nueva Categoría</a>
+        <center> <h2>Autores</h2></center>
+       <br>
+        <a href="{{ url('/dashboard/autor/create') }}" class="btn btn-primary btn-sm">Nuevo Autor</a>
+       <br>
         <table class="table table-dark table-striped">
             <thead>
                 <tr>
-                    <th>#</th>
+                    <th>Codigo</th>
                     <th>Nombre</th>
-                    <th>Descripción</th>
                     <th>Fecha de cración</th>
                     <th>Fecha de modificaición</th>
                     <th>Editar</th>
@@ -19,16 +20,15 @@
                 </tr>          
             </thead>
             <tbody>
-                @foreach ($category as $category)
+                @foreach ($autor as $autor)
                     <tr>
-                        <td>{{ $category->id }}</td>
-                        <td>{{ $category->name }}</td>
-                        <td>{{ $category->description }}</td>
-                        <td>{{ $category->created_at }}</td>
-                        <td>{{ $category->updated_at }}</td>
-                        <td><a href="{{ url('dashboard/category/'.$category->id.'/edit') }}" class="bi bi-pencil"></a></td>
+                        <td>{{ $autor->codigo }}</td>
+                        <td>{{ $autor->nombre }}</td>
+                        <td>{{ $autor->created_at }}</td>
+                        <td>{{ $autor->updated_at }}</td>
+                        <td><a href="{{ url('dashboard/autor/'.$autor->codigo.'/edit') }}" class="bi bi-pencil"></a></td>
                         <td>
-                            <form action="{{ url('dashboard/category/'.$category->id )}}" method="post">
+                            <form action="{{ url('dashboard/autor/'.$autor->codigo )}}" method="post">
                                 @method("DELETE")
                                 @csrf
                                 <button class="bi bi-eraser-fill" type="submit"></button>

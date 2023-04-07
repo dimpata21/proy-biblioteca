@@ -22,10 +22,16 @@
                     <a href="{{ url('/dashboard') }}" class="nav-link">Inicio</a>
                 </li>
                 <li class="nav-item active">
-                    <a href="{{ url('/dashboard/post') }}" class="nav-link">Publicaciones</a>
+                    <a href="{{ url('/dashboard/libro') }}" class="nav-link">Libros</a>
                 </li>
                 <li class="nav-item active">
-                    <a href="{{ url('/dashboard/category') }}" class="nav-link">Categorias</a>
+                    <a href="{{ url('/dashboard/autor') }}" class="nav-link">Autores</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="{{ url('/dashboard/editorial') }}" class="nav-link">Editoriales</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="{{ url('/dashboard/ejemplar') }}" class="nav-link">Ejemplares</a>
                 </li>
             </ul>
         </div>    
@@ -52,5 +58,8 @@
 
     @yield('contenido')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+
 </body>
 </html>
